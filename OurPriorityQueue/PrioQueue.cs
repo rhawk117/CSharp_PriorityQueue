@@ -305,22 +305,19 @@ namespace OurPriorityQueue
         /// <summary>
         /// Recursively prints the tree.
         /// </summary>
-        private void printAssist(int index = 1, int indent = 0)
+        private void printAssist(int curIndex = 1, int indent = 0)
         {
-            if (index > count) return; // Base case: index is outside the bounds of the heap.
+            if (curIndex > count) return;
 
-            int indentSpaces = 4; // Adjust this value to increase/decrease indentation width.
+            int indentAmm = 4;
 
-            string indentText = new String(' ', indent * indentSpaces);
+            string indentText = new String(' ', indent * indentAmm);
 
-            // Print right child first (to display the tree top-down with the root at left and leaves at right).
-            printAssist(2 * index + 1, indent + 1); // Right child
+            printAssist(2 * curIndex + 1, indent + 1); // Right child
 
-            // Print current node.
-            Console.WriteLine($"{indentText}{table[index]}");
+            Console.WriteLine($"{indentText}{table[curIndex]}");
 
-            // Print left child.
-            printAssist(2 * index, indent + 1); // Left child
+            printAssist(2 * curIndex, indent + 1); // Left child
         }
 
 
