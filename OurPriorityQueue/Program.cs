@@ -20,14 +20,17 @@ namespace OurPriorityQueue
 
 
 
-            var pQ = testCase();
-            pQ.PrintTree();
-            WriteLine("[ 31 to 30 => (false) since it's parent (8) is still less than 30 and no changes occur ]");
-            WriteLine($"Result = {pQ.IncreasePriority(31, 30)}");
-            ReadLine();
-            WriteLine("Still works??");
-            edgeCases(pQ);
+            //var pQ = testCase();
+            //pQ.PrintTree();
+            //WriteLine("[ 31 to 30 => (false) since it's parent (8) is still less than 30 and no changes occur ]");
+            //WriteLine($"Result = {pQ.IncreasePriority(31, 30)}");
+            //ReadLine();
+            //WriteLine("Still works??");
+            //edgeCases(pQ);
+            View v = new View(PriorityHelper.InClassExample());
+            v.MainMenu();
         }
+
 
         static void edgeCases(OurPriorityQueue<int, int> pQ)
         {

@@ -50,7 +50,7 @@ namespace OurPriorityQueue
                     a). Array View - View PQ 'table' array
                     o). 'In Order' View - View PQ in Order
                     t). Tree View - PQ as a Tree
-                
+                    q). exit / go back
                 ");
                 ConsoleKeyInfo input = ReadKey();
                 Clear();
